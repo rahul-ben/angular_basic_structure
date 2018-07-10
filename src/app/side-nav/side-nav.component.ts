@@ -10,6 +10,8 @@ export class SideNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+  };
+
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 
 }

@@ -6,21 +6,28 @@ import { LandingComponent } from './landing/landing.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import { MainScreenComponent } from './main-screen/main-screen.component';
-import { LandingModule } from 'src/app/landing/landing.module'
+import { MainScreenComponent } from 'src/app/landing//main-screen/main-screen.component';
+import { LandingModule } from 'src/app/landing/landing.module';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     TopNavComponent,
-    SideNavComponent,
-    MainScreenComponent
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LandingModule
+    LandingModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatToolbarModule
     
   ],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],
